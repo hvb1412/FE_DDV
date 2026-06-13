@@ -1,0 +1,453 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  --background: #ffffff;
+  --foreground: oklch(0.145 0 0);
+  --card: #ffffff;
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: #030213;
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.95 0.0058 264.53);
+  --secondary-foreground: #030213;
+  --muted: #ececf0;
+  --muted-foreground: #717182;
+  --accent: #e9ebef;
+  --accent-foreground: #030213;
+  --destructive: #d4183d;
+  --destructive-foreground: #ffffff;
+  --border: rgba(0, 0, 0, 0.1);
+  --input: transparent;
+  --input-background: #f3f3f5;
+  --switch-background: #cbced4;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: #030213;
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.145 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.439 0 0);
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* === Dark mode overrides for hardcoded Tailwind utility colors ===
+   UNLAYERED so they cascade after all Tailwind utility layers.
+   Scoped to .app-main (content + topbar) so the green sidebar is untouched.
+   Palette is tuned for the Patient experience: soft slate base, lifted card
+   surfaces, vivid (but not neon) accent text on tinted pastel surfaces. */
+.dark .app-main {
+  color-scheme: dark;
+  /* Surfaces */
+  --dm-base: #0b1220;        /* page background */
+  --dm-card: #131c2e;        /* primary card */
+  --dm-card-hi: #1a2438;     /* elevated card (modals, popovers) */
+  --dm-muted: #1f2a40;       /* subtle chip/input bg */
+  --dm-muted-hi: #283452;    /* hover */
+  /* Borders */
+  --dm-border-1: #1e2a3f;
+  --dm-border-2: #2a3955;
+  --dm-border-3: #3a4a6b;
+  /* Text */
+  --dm-text-1: #f1f5f9;
+  --dm-text-2: #cbd5e1;
+  --dm-text-3: #94a3b8;
+  --dm-text-4: #64748b;
+}
+
+/* ---------- Surfaces ---------- */
+.dark .app-main .bg-gray-50 { background-color: var(--dm-base); }
+.dark .app-main .bg-white { background-color: var(--dm-card); }
+.dark .app-main .bg-gray-100 { background-color: var(--dm-muted); }
+.dark .app-main .bg-gray-200 { background-color: var(--dm-muted-hi); }
+.dark .app-main .bg-gray-300 { background-color: #3a4a6b; }
+.dark .app-main .hover\:bg-gray-50:hover { background-color: var(--dm-muted); }
+.dark .app-main .hover\:bg-gray-100:hover { background-color: var(--dm-muted-hi); }
+.dark .app-main .hover\:bg-gray-200:hover { background-color: #3a4a6b; }
+.dark .app-main .bg-gray-50\/50 { background-color: rgba(11, 18, 32, 0.6); }
+.dark .app-main .bg-slate-700 { background-color: #1e293b; }
+.dark .app-main .bg-slate-900 { background-color: #0a0f1c; }
+.dark .app-main .bg-gray-900 { background-color: #0a0f1c; }
+
+/* ---------- Borders ---------- */
+.dark .app-main .border-gray-50 { border-color: var(--dm-border-1); }
+.dark .app-main .border-gray-100 { border-color: var(--dm-border-1); }
+.dark .app-main .border-gray-200 { border-color: var(--dm-border-2); }
+.dark .app-main .border-gray-300 { border-color: var(--dm-border-3); }
+.dark .app-main .border-slate-700 { border-color: #334155; }
+.dark .app-main .divide-gray-50 > * + * { border-color: var(--dm-border-1); }
+.dark .app-main .divide-gray-100 > * + * { border-color: var(--dm-border-1); }
+
+/* ---------- Text neutrals ---------- */
+.dark .app-main .text-gray-900,
+.dark .app-main .text-slate-900 { color: var(--dm-text-1); }
+.dark .app-main .text-gray-800 { color: #e2e8f0; }
+.dark .app-main .text-gray-700 { color: var(--dm-text-2); }
+.dark .app-main .text-gray-600 { color: var(--dm-text-3); }
+.dark .app-main .text-gray-500 { color: var(--dm-text-3); }
+.dark .app-main .text-gray-400 { color: var(--dm-text-4); }
+.dark .app-main .text-gray-300 { color: #475569; }
+.dark .app-main .placeholder\:text-gray-400::placeholder { color: var(--dm-text-4); }
+
+/* ---------- Accent: EMERALD / GREEN ---------- */
+.dark .app-main .bg-emerald-50 { background-color: rgba(16, 185, 129, 0.14); }
+.dark .app-main .bg-emerald-100 { background-color: rgba(16, 185, 129, 0.22); }
+.dark .app-main .bg-green-50 { background-color: rgba(34, 197, 94, 0.14); }
+.dark .app-main .bg-green-100 { background-color: rgba(34, 197, 94, 0.22); }
+.dark .app-main .bg-green-200 { background-color: rgba(34, 197, 94, 0.3); }
+.dark .app-main .bg-emerald-200 { background-color: rgba(16, 185, 129, 0.3); }
+.dark .app-main .bg-green-300 { background-color: rgba(34, 197, 94, 0.5); }
+.dark .app-main .hover\:bg-emerald-50:hover { background-color: rgba(16, 185, 129, 0.18); }
+.dark .app-main .text-emerald-400 { color: #6ee7b7; }
+.dark .app-main .text-emerald-500 { color: #34d399; }
+.dark .app-main .text-emerald-600 { color: #34d399; }
+.dark .app-main .text-emerald-700 { color: #6ee7b7; }
+.dark .app-main .text-emerald-800 { color: #a7f3d0; }
+.dark .app-main .text-green-600 { color: #34d399; }
+.dark .app-main .text-green-700 { color: #6ee7b7; }
+.dark .app-main .border-emerald-100 { border-color: rgba(16, 185, 129, 0.3); }
+.dark .app-main .border-emerald-200 { border-color: rgba(16, 185, 129, 0.4); }
+.dark .app-main .border-emerald-300 { border-color: rgba(16, 185, 129, 0.55); }
+.dark .app-main .border-green-100 { border-color: rgba(34, 197, 94, 0.3); }
+.dark .app-main .border-green-200 { border-color: rgba(34, 197, 94, 0.4); }
+.dark .app-main .ring-emerald-100 { --tw-ring-color: rgba(16, 185, 129, 0.3); }
+.dark .app-main .ring-emerald-200 { --tw-ring-color: rgba(16, 185, 129, 0.4); }
+.dark .app-main .ring-emerald-300 { --tw-ring-color: rgba(16, 185, 129, 0.5); }
+
+/* ---------- Accent: PINK / ROSE ---------- */
+.dark .app-main .bg-pink-50 { background-color: rgba(236, 72, 153, 0.14); }
+.dark .app-main .bg-pink-100 { background-color: rgba(236, 72, 153, 0.22); }
+.dark .app-main .bg-rose-50 { background-color: rgba(244, 63, 94, 0.14); }
+.dark .app-main .hover\:bg-pink-50:hover { background-color: rgba(236, 72, 153, 0.18); }
+.dark .app-main .hover\:bg-pink-100:hover { background-color: rgba(236, 72, 153, 0.26); }
+.dark .app-main .text-pink-500 { color: #f472b6; }
+.dark .app-main .text-pink-600 { color: #f472b6; }
+.dark .app-main .text-pink-700 { color: #f9a8d4; }
+.dark .app-main .text-rose-400 { color: #fda4af; }
+.dark .app-main .text-rose-500 { color: #fb7185; }
+.dark .app-main .text-rose-600 { color: #fb7185; }
+.dark .app-main .text-rose-700 { color: #fda4af; }
+.dark .app-main .border-pink-300 { border-color: rgba(236, 72, 153, 0.55); }
+.dark .app-main .border-rose-200 { border-color: rgba(244, 63, 94, 0.4); }
+.dark .app-main .ring-rose-100 { --tw-ring-color: rgba(244, 63, 94, 0.3); }
+
+/* ---------- Accent: ORANGE / AMBER / YELLOW ---------- */
+.dark .app-main .bg-orange-50 { background-color: rgba(249, 115, 22, 0.14); }
+.dark .app-main .bg-amber-50 { background-color: rgba(245, 158, 11, 0.14); }
+.dark .app-main .bg-yellow-50 { background-color: rgba(234, 179, 8, 0.14); }
+.dark .app-main .bg-yellow-200 { background-color: rgba(234, 179, 8, 0.32); }
+.dark .app-main .text-orange-500 { color: #fb923c; }
+.dark .app-main .text-orange-600 { color: #fb923c; }
+.dark .app-main .text-orange-700 { color: #fdba74; }
+.dark .app-main .text-amber-500 { color: #fbbf24; }
+.dark .app-main .text-amber-600 { color: #fbbf24; }
+.dark .app-main .text-amber-700 { color: #fcd34d; }
+.dark .app-main .text-amber-800 { color: #fde68a; }
+.dark .app-main .text-amber-900 { color: #fef3c7; }
+.dark .app-main .text-yellow-400 { color: #facc15; }
+.dark .app-main .text-yellow-600 { color: #facc15; }
+.dark .app-main .border-amber-100 { border-color: rgba(245, 158, 11, 0.3); }
+.dark .app-main .border-amber-200 { border-color: rgba(245, 158, 11, 0.4); }
+.dark .app-main .divide-amber-100 > * + * { border-color: rgba(245, 158, 11, 0.3); }
+.dark .app-main .ring-amber-100 { --tw-ring-color: rgba(245, 158, 11, 0.3); }
+.dark .app-main .ring-amber-200 { --tw-ring-color: rgba(245, 158, 11, 0.4); }
+
+/* ---------- Accent: RED ---------- */
+.dark .app-main .bg-red-50 { background-color: rgba(239, 68, 68, 0.14); }
+.dark .app-main .bg-red-100 { background-color: rgba(239, 68, 68, 0.22); }
+.dark .app-main .hover\:bg-red-50:hover { background-color: rgba(239, 68, 68, 0.18); }
+.dark .app-main .text-red-500 { color: #fca5a5; }
+.dark .app-main .text-red-600 { color: #f87171; }
+.dark .app-main .text-red-700 { color: #fca5a5; }
+.dark .app-main .border-red-200 { border-color: rgba(239, 68, 68, 0.4); }
+.dark .app-main .border-red-300 { border-color: rgba(239, 68, 68, 0.55); }
+.dark .app-main .ring-red-100 { --tw-ring-color: rgba(239, 68, 68, 0.3); }
+
+/* ---------- Accent: SKY / BLUE ---------- */
+.dark .app-main .bg-sky-50 { background-color: rgba(14, 165, 233, 0.14); }
+.dark .app-main .bg-sky-100 { background-color: rgba(14, 165, 233, 0.22); }
+.dark .app-main .bg-blue-50 { background-color: rgba(59, 130, 246, 0.14); }
+.dark .app-main .text-sky-500 { color: #38bdf8; }
+.dark .app-main .text-sky-600 { color: #38bdf8; }
+.dark .app-main .text-sky-700 { color: #7dd3fc; }
+.dark .app-main .text-sky-800 { color: #bae6fd; }
+.dark .app-main .text-blue-600 { color: #60a5fa; }
+.dark .app-main .text-blue-700 { color: #93c5fd; }
+.dark .app-main .text-blue-800 { color: #bfdbfe; }
+.dark .app-main .text-blue-900 { color: #dbeafe; }
+.dark .app-main .border-sky-300 { border-color: rgba(14, 165, 233, 0.5); }
+.dark .app-main .border-blue-200 { border-color: rgba(59, 130, 246, 0.4); }
+.dark .app-main .ring-blue-100 { --tw-ring-color: rgba(59, 130, 246, 0.3); }
+
+/* ---------- Accent: PURPLE / VIOLET ---------- */
+.dark .app-main .bg-purple-50 { background-color: rgba(168, 85, 247, 0.14); }
+.dark .app-main .bg-violet-50 { background-color: rgba(139, 92, 246, 0.14); }
+.dark .app-main .text-purple-600 { color: #c084fc; }
+.dark .app-main .text-purple-700 { color: #d8b4fe; }
+.dark .app-main .text-violet-500 { color: #a78bfa; }
+.dark .app-main .text-violet-600 { color: #a78bfa; }
+.dark .app-main .text-violet-700 { color: #c4b5fd; }
+.dark .app-main .border-violet-200 { border-color: rgba(139, 92, 246, 0.4); }
+
+/* ---------- Accent: INDIGO / TEAL ---------- */
+.dark .app-main .bg-indigo-50 { background-color: rgba(99, 102, 241, 0.14); }
+.dark .app-main .bg-teal-50 { background-color: rgba(20, 184, 166, 0.14); }
+
+/* ---------- Inputs ---------- */
+.dark .app-main input,
+.dark .app-main textarea,
+.dark .app-main select { color: var(--dm-text-1); }
+.dark .app-main input::placeholder,
+.dark .app-main textarea::placeholder { color: var(--dm-text-4); }
+.dark .app-main input[type="text"],
+.dark .app-main input[type="email"],
+.dark .app-main input[type="password"],
+.dark .app-main input[type="number"],
+.dark .app-main input[type="search"],
+.dark .app-main textarea,
+.dark .app-main select { background-color: transparent; }
+
+/* ---------- Misc ---------- */
+.dark .app-main kbd {
+  background-color: var(--dm-muted);
+  border-color: var(--dm-border-2);
+  color: var(--dm-text-2);
+}
+
+/* ---------- Shadows (softer + a touch of luminance) ---------- */
+.dark .app-main .shadow-sm { box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); }
+.dark .app-main .shadow { box-shadow: 0 2px 6px rgba(0, 0, 0, 0.55); }
+.dark .app-main .shadow-lg { box-shadow: 0 10px 28px rgba(0, 0, 0, 0.6); }
+.dark .app-main .shadow-xl { box-shadow: 0 16px 40px rgba(0, 0, 0, 0.65); }
+
+/* Cards get a subtle inner highlight to read as "lifted" surface */
+.dark .app-main .rounded-2xl.bg-white,
+.dark .app-main .rounded-xl.bg-white {
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.03) inset,
+    0 2px 6px rgba(0, 0, 0, 0.45);
+}
+
+/* ---------- Soft pastel gradient backgrounds (icon tiles, hero blocks) ---------- */
+.dark .app-main .from-emerald-50 { --tw-gradient-from: rgba(16, 185, 129, 0.18) var(--tw-gradient-from-position); }
+.dark .app-main .from-emerald-100 { --tw-gradient-from: rgba(16, 185, 129, 0.25) var(--tw-gradient-from-position); }
+.dark .app-main .from-amber-50 { --tw-gradient-from: rgba(245, 158, 11, 0.18) var(--tw-gradient-from-position); }
+.dark .app-main .from-amber-100 { --tw-gradient-from: rgba(245, 158, 11, 0.25) var(--tw-gradient-from-position); }
+.dark .app-main .from-blue-50 { --tw-gradient-from: rgba(59, 130, 246, 0.18) var(--tw-gradient-from-position); }
+.dark .app-main .from-violet-50 { --tw-gradient-from: rgba(139, 92, 246, 0.18) var(--tw-gradient-from-position); }
+.dark .app-main .from-violet-100 { --tw-gradient-from: rgba(139, 92, 246, 0.25) var(--tw-gradient-from-position); }
+.dark .app-main .to-green-100 { --tw-gradient-to: rgba(34, 197, 94, 0.22) var(--tw-gradient-to-position); }
+.dark .app-main .to-green-200 { --tw-gradient-to: rgba(34, 197, 94, 0.3) var(--tw-gradient-to-position); }
+.dark .app-main .to-emerald-50 { --tw-gradient-to: rgba(16, 185, 129, 0.2) var(--tw-gradient-to-position); }
+.dark .app-main .to-orange-50 { --tw-gradient-to: rgba(249, 115, 22, 0.2) var(--tw-gradient-to-position); }
+.dark .app-main .to-orange-200 { --tw-gradient-to: rgba(249, 115, 22, 0.3) var(--tw-gradient-to-position); }
+.dark .app-main .to-orange-300 { --tw-gradient-to: rgba(249, 115, 22, 0.35) var(--tw-gradient-to-position); }
+.dark .app-main .to-purple-200 { --tw-gradient-to: rgba(168, 85, 247, 0.28) var(--tw-gradient-to-position); }
+.dark .app-main .to-yellow-200 { --tw-gradient-to: rgba(234, 179, 8, 0.3) var(--tw-gradient-to-position); }
+
+/* Body bg in dark */
+.dark body { background-color: #0b1220; }
+
+/* ---------- Auth pages (Login / Register) polish ----------
+   The auth layout uses .auth-shell on the root and .auth-form on the right
+   panel. Give the form panel a slightly elevated card surface, sink the
+   inputs into the page, and add a vertical separator from the brand panel. */
+.dark .app-main.auth-shell { background-color: #070d18; }
+.dark .auth-shell .auth-form {
+  background-color: var(--dm-card);
+  border-left: 1px solid var(--dm-border-2);
+  box-shadow: -24px 0 60px rgba(0, 0, 0, 0.45);
+}
+.dark .auth-shell .auth-form input,
+.dark .auth-shell .auth-form select,
+.dark .auth-shell .auth-form textarea {
+  background-color: var(--dm-base) !important;
+  border-color: var(--dm-border-2);
+}
+.dark .auth-shell .auth-form input:hover,
+.dark .auth-shell .auth-form select:hover {
+  border-color: rgba(52, 211, 153, 0.55);
+}
+.dark .auth-shell .auth-form .text-gray-900 { color: #ffffff; }
+.dark .auth-shell .auth-form h2,
+.dark .auth-shell .auth-form h1 { color: #ffffff; }
+/* Selection chips in step 3 (Register) lift on dark */
+.dark .auth-shell .auth-form button.border-gray-200 { background-color: var(--dm-base); }
+/* Forgot-password modal — use the elevated card */
+.dark .auth-shell .bg-white.rounded-2xl { background-color: var(--dm-card-hi); }
+
+/* Dropdowns / popovers floating inside .app-main get the elevated surface */
+.dark .app-main [class*="absolute"].bg-white,
+.dark .app-main [class*="fixed"] .bg-white {
+  background-color: var(--dm-card-hi);
+}
+
+/* Sidebar (aside) — darken the green gradient in dark mode.
+   The gradient is applied via inline style="background: linear-gradient(...)", which
+   has high specificity, so !important is required to override it. */
+.dark aside {
+  background: linear-gradient(180deg, #052e16 0%, #064e3b 55%, #065f46 100%) !important;
+}
+.dark aside .text-green-300 { color: #86efac; }
+.dark aside .text-green-400 { color: #4ade80; }
+.dark aside .text-green-100 { color: #d1fae5; }
+.dark aside .bg-white\/15 { background-color: rgba(255, 255, 255, 0.08); }
+.dark aside .hover\:bg-white\/15:hover { background-color: rgba(255, 255, 255, 0.1); }
+.dark aside .border-green-900\/40 { border-color: rgba(0, 0, 0, 0.4); }
+.dark aside .ring-white\/10 { --tw-ring-color: rgba(255, 255, 255, 0.06); }
+.dark aside .ring-white\/30 { --tw-ring-color: rgba(255, 255, 255, 0.18); }
+/* Active nav item: keep a softer surface than pure white */
+.dark aside a.bg-white,
+.dark aside .bg-white { background-color: #f0fdf4; }
+
+@layer base {
+
+  /**
+  * Default typography styles for HTML elements (h1-h4, p, label, button, input).
+  * These are in @layer base, so Tailwind utility classes (like text-sm, text-lg) automatically override them.
+  */
+
+  html {
+    font-size: var(--font-size);
+  }
+
+  h1 {
+    font-size: var(--text-2xl);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  h2 {
+    font-size: var(--text-xl);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  h3 {
+    font-size: var(--text-lg);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  h4 {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  label {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  button {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  input {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-normal);
+    line-height: 1.5;
+  }
+}
